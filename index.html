@@ -2,23 +2,57 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <title>Менің ЖИ ассистентім</title>
+    <title>Әзірлеушіге арналған ЖИ-құралдары</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="chat-container">
-    <div class="chat-header">
-        🤖 ЖИ Ассистент
+<header>
+    <h1>🤖 Әзірлеушіге арналған ЖИ-құралдары</h1>
+    <button onclick="toggleTheme()">🌙 Тақырып ауыстыру</button>
+</header>
+
+<section class="cards">
+
+    <div class="card">
+        <h2>ChatGPT</h2>
+        <p>Жасанды интеллект чат-ассистенті. Код жазуға, сұрақтарға жауап беруге көмектеседі.</p>
+        <a href="https://chat.openai.com" target="_blank">Сайтқа өту</a>
     </div>
 
-    <div class="chat-messages" id="messages"></div>
-
-    <div class="chat-input">
-        <input type="text" id="userInput" placeholder="Хабарлама жаз...">
-        <button onclick="sendMessage()">➤</button>
+    <div class="card">
+        <h2>GitHub Copilot</h2>
+        <p>Кодты автоматты түрде толықтыратын құрал. Программистерге жылдам жұмыс істеуге көмектеседі.</p>
+        <a href="https://github.com/features/copilot" target="_blank">Сайтқа өту</a>
     </div>
-</div>
+
+    <div class="card">
+        <h2>Claude</h2>
+        <p>Anthropic компаниясының ЖИ моделі. Ұзын мәтіндермен жұмыс істеуге өте ыңғайлы.</p>
+        <a href="https://claude.ai" target="_blank">Сайтқа өту</a>
+    </div>
+
+</section>
+
+<section class="experience">
+    <h2>Менің тәжірибем</h2>
+    <p>
+        Мен ChatGPT құралын пайдаланып көрдім. Ол код жазуда және қателерді табуда өте көмектесті.
+        Кейде дұрыс түсінбей қалады, бірақ нақты сұрақ қойсаң жақсы жауап береді.
+        Болашақта ЖИ программистердің жұмысын жеңілдетеді деп ойлаймын.
+    </p>
+</section>
+
+<section class="chat">
+    <h2>💬 ЖИ чат</h2>
+
+    <div id="messages"></div>
+
+    <input type="text" id="userInput" placeholder="Сұрақ жаз...">
+    <button onclick="sendMessage()">Жіберу</button>
+
+    <p>Сұраныс саны: <span id="count">0</span></p>
+</section>
 
 <script src="script.js"></script>
 </body>
