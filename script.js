@@ -1,15 +1,24 @@
-const API_KEY = "ӨЗ_API_KEY_ҚОЙ"; // ← МІНДЕТТІ түрде өз key-іңді қой!
+let count = 0;
 
+/**
+ * ЖИ-ге сұраныс жіберу функциясы
+ */
 async function sendMessage() {
     let input = document.getElementById("userInput");
-    let message = input.value;
+    let msg = input.value;
 
-    if (!message.trim()) return;
+    if (!msg) return;
 
-    addMessage(message, "user");
+    addMessage("Сен: " + msg);
+
     input.value = "";
 
-    addMessage("Жазып жатыр...", "bot");
+    count++;
+    document.getElementById("count").innerText = count;
+
+    addMessage("ЖИ: жазып жатыр...");
+
+    const API_KEY = "ӨЗ_API_KEY"; // ← қой!
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -20,27 +29,30 @@ async function sendMessage() {
         body: JSON.stringify({
             model: "gpt-4o-mini",
             messages: [
-                { role: "system", content: "Сен қазақ тілінде жауап беретін көмекші ассистентсің." },
-                { role: "user", content: message }
+                { role: "user", content: msg }
             ]
         })
     });
 
     const data = await response.json();
 
-    document.querySelector(".bot:last-child").remove();
+    document.getElementById("messages").lastChild.remove();
 
-    let reply = data.choices[0].message.content;
-    addMessage(reply, "bot");
+    addMessage("ЖИ: " + data.choices[0].message.content);
 }
 
-function addMessage(text, sender) {
-    let messages = document.getElementById("messages");
+/**
+ * Хабарламаны экранға шығару
+ */
+function addMessage(text) {
+    let div = document.createElement("p");
+    div.innerText = text;
+    document.getElementById("messages").appendChild(div);
+}
 
-    let msg = document.createElement("div");
-    msg.className = "message " + sender;
-    msg.innerText = text;
-
-    messages.appendChild(msg);
-    messages.scrollTop = messages.scrollHeight;
+/**
+ * Қараңғы режим ауыстыру
+ */
+function toggleTheme() {
+    document.body.classList.toggle("dark");
 }
