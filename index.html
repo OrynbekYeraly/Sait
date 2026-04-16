@@ -1,174 +1,87 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Әзірлеушіге арналған ЖИ-құралдары</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Современный профиль | Дизайн & опыт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="gradient-bar"></div>
 <header>
-    <h1>🤖 Әзірлеушіге арналған ЖИ-құралдары</h1>
-    <button onclick="toggleTheme()">🌙 Тақырып ауыстыру</button>
+    <h1>✦ Алексей Смирнов ✦</h1>
+    <p>продуктовый дизайнер • фронтенд-энтузиаст • создаю цифровой опыт</p>
 </header>
 
-<section class="cards">
+<main>
+    <div class="container">
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>UI/UX дизайн</h3>
+                <p>Прототипирование, пользовательские сценарии, адаптивный дизайн с вниманием к деталям.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡️</div>
+                <h3>Frontend</h3>
+                <p>HTML5, CSS3, JavaScript, React — создаю живые и плавные интерфейсы.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>Анимация</h3>
+                <p>Микро-взаимодействия, переходы, повышающие вовлеченность пользователей.</p>
+            </div>
+        </div>
 
-    <div class="card">
-        <h2>ChatGPT</h2>
-        <p>Жасанды интеллект чат-ассистенті. Код жазуға, сұрақтарға жауап беруге көмектеседі.</p>
-        <a href="https://chat.openai.com" target="_blank">Сайтқа өту</a>
+        <div class="experience">
+            <div class="section-title">📌 Профессиональный путь</div>
+            <div class="timeline">
+                <div class="exp-item">
+                    <div class="exp-title">
+                        <span>⭐ Lead Product Designer — Digital Studio "Nexus"</span>
+                        <span class="exp-date">2022 — настоящее время</span>
+                    </div>
+                    <div class="exp-desc">Разработка дизайн-системы, управление командой из 3 дизайнеров, внедрение компонентного подхода. Рост метрик юзабилити на 34%.</div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-title">
+                        <span>🚀 UI/UX Designer — Fintech Solutions</span>
+                        <span class="exp-date">2019 — 2022</span>
+                    </div>
+                    <div class="exp-desc">Дизайн мобильного приложения для банка, создание интерактивных прототипов, исследование аудитории, внедрение тёмной темы.</div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-title">
+                        <span>🎓 Freelance веб-дизайнер & разработчик</span>
+                        <span class="exp-date">2017 — 2019</span>
+                    </div>
+                    <div class="exp-desc">Реализовал 20+ коммерческих проектов: лендинги, интернет-магазины, корпоративные порталы с нуля.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="section-title">💬 Живой чат — спроси меня</div>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <span></span> 🤖 Чат-ассистент (AI + Алексей)
+                </div>
+                <div id="messages">
+                    <div class="message bot-msg">Привет! Я виртуальный помощник. Расскажу об опыте, проектах или просто поболтаю 😊 Спрашивай!</div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="chatInput" placeholder="Напишите сообщение..." autocomplete="off">
+                    <button id="sendBtn">Отправить</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer>
+        © 2025 Алексей Смирнов — современный дизайн с душой ✨
+    </footer>
+</main>
 
-    <div class="card">
-        <h2>GitHub Copilot</h2>
-        <p>Кодты автоматты түрде толықтыратын құрал. Программистерге жылдам жұмыс істеуге көмектеседі.</p>
-        <a href="https://github.com/features/copilot" target="_blank">Сайтқа өту</a>
-    </div>
-
-    <div class="card">
-        <h2>Claude</h2>
-        <p>Anthropic компаниясының ЖИ моделі. Ұзын мәтіндермен жұмыс істеуге өте ыңғайлы.</p>
-        <a href="https://claude.ai" target="_blank">Сайтқа өту</a>
-    </div>
-
-</section>
-
-<section class="experience">
-    <h2>Менің тәжірибем</h2>
-    <p>
-        Мен ChatGPT құралын пайдаланып көрдім. Ол код жазуда және қателерді табуда өте көмектесті.
-        Кейде дұрыс түсінбей қалады, бірақ нақты сұрақ қойсаң жақсы жауап береді.
-        Болашақта ЖИ программистердің жұмысын жеңілдетеді деп ойлаймын.
-    </p>
-</section>
-
-<section class="chat">
-    <h2>💬 ЖИ чат</h2>
-
-    <div id="messages"></div>
-
-    <input type="text" id="userInput" placeholder="Сұрақ жаз...">
-    <button onclick="sendMessage()">Жіберу</button>
-
-    <p>Сұраныс саны: <span id="count">0</span></p>
-</section>
-
-<script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="kk">
-<head>
-    <meta charset="UTF-8">
-    <title>Әзірлеушіге арналған ЖИ-құралдары</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <h1>🤖 Әзірлеушіге арналған ЖИ-құралдары</h1>
-    <button onclick="toggleTheme()">🌙 Тақырып ауыстыру</button>
-</header>
-
-<section class="cards">
-
-    <div class="card">
-        <h2>ChatGPT</h2>
-        <p>Жасанды интеллект чат-ассистенті. Код жазуға, сұрақтарға жауап беруге көмектеседі.</p>
-        <a href="https://chat.openai.com" target="_blank">Сайтқа өту</a>
-    </div>
-
-    <div class="card">
-        <h2>GitHub Copilot</h2>
-        <p>Кодты автоматты түрде толықтыратын құрал. Программистерге жылдам жұмыс істеуге көмектеседі.</p>
-        <a href="https://github.com/features/copilot" target="_blank">Сайтқа өту</a>
-    </div>
-
-    <div class="card">
-        <h2>Claude</h2>
-        <p>Anthropic компаниясының ЖИ моделі. Ұзын мәтіндермен жұмыс істеуге өте ыңғайлы.</p>
-        <a href="https://claude.ai" target="_blank">Сайтқа өту</a>
-    </div>
-
-</section>
-
-<section class="experience">
-    <h2>Менің тәжірибем</h2>
-    <p>
-        Мен ChatGPT құралын пайдаланып көрдім. Ол код жазуда және қателерді табуда өте көмектесті.
-        Кейде дұрыс түсінбей қалады, бірақ нақты сұрақ қойсаң жақсы жауап береді.
-        Болашақта ЖИ программистердің жұмысын жеңілдетеді деп ойлаймын.
-    </p>
-</section>
-
-<section class="chat">
-    <h2>💬 ЖИ чат</h2>
-
-    <div id="messages"></div>
-
-    <input type="text" id="userInput" placeholder="Сұрақ жаз...">
-    <button onclick="sendMessage()">Жіберу</button>
-
-    <p>Сұраныс саны: <span id="count">0</span></p>
-</section>
-
-<script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="kk">
-<head>
-    <meta charset="UTF-8">
-    <title>Әзірлеушіге арналған ЖИ-құралдары</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <h1>🤖 Әзірлеушіге арналған ЖИ-құралдары</h1>
-    <button onclick="toggleTheme()">🌙 Тақырып ауыстыру</button>
-</header>
-
-<section class="cards">
-
-    <div class="card">
-        <h2>ChatGPT</h2>
-        <p>Жасанды интеллект чат-ассистенті. Код жазуға, сұрақтарға жауап беруге көмектеседі.</p>
-        <a href="https://chat.openai.com" target="_blank">Сайтқа өту</a>
-    </div>
-
-    <div class="card">
-        <h2>GitHub Copilot</h2>
-        <p>Кодты автоматты түрде толықтыратын құрал. Программистерге жылдам жұмыс істеуге көмектеседі.</p>
-        <a href="https://github.com/features/copilot" target="_blank">Сайтқа өту</a>
-    </div>
-
-    <div class="card">
-        <h2>Claude</h2>
-        <p>Anthropic компаниясының ЖИ моделі. Ұзын мәтіндермен жұмыс істеуге өте ыңғайлы.</p>
-        <a href="https://claude.ai" target="_blank">Сайтқа өту</a>
-    </div>
-
-</section>
-
-<section class="experience">
-    <h2>Менің тәжірибем</h2>
-    <p>
-        Мен ChatGPT құралын пайдаланып көрдім. Ол код жазуда және қателерді табуда өте көмектесті.
-        Кейде дұрыс түсінбей қалады, бірақ нақты сұрақ қойсаң жақсы жауап береді.
-        Болашақта ЖИ программистердің жұмысын жеңілдетеді деп ойлаймын.
-    </p>
-</section>
-
-<section class="chat">
-    <h2>💬 ЖИ чат</h2>
-
-    <div id="messages"></div>
-
-    <input type="text" id="userInput" placeholder="Сұрақ жаз...">
-    <button onclick="sendMessage()">Жіберу</button>
-
-    <p>Сұраныс саны: <span id="count">0</span></p>
-</section>
+<button class="theme-toggle" id="darkModeToggle" aria-label="Сменить тему">🌙</button>
 
 <script src="script.js"></script>
 </body>
