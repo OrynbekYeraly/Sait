@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Almaty Tours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🏔️ Алматы Турлар</h1>
+    <p>Ең жақсы турларды таңда</p>
+  </header>
+
+  <section class="container">
+
+    <div class="card">
+      <h2>Медеу</h2>
+      <p>Табиғат және тау көрінісі</p>
+      <span>Баға: 5000 ₸</span>
+      <button onclick="bookTour('Медеу')">Брон жасау</button>
+    </div>
+
+    <div class="card">
+      <h2>Шымбұлақ</h2>
+      <p>Шаңғы курорты</p>
+      <span>Баға: 12000 ₸</span>
+      <button onclick="bookTour('Шымбұлақ')">Брон жасау</button>
+    </div>
+
+    <div class="card">
+      <h2>Көлсай</h2>
+      <p>Әдемі көлдер</p>
+      <span>Баға: 15000 ₸</span>
+      <button onclick="bookTour('Көлсай')">Брон жасау</button>
+    </div>
+
+  </section>
+
+  <section class="booking">
+    <h2>📦 Брондар</h2>
+    <ul id="bookList"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
